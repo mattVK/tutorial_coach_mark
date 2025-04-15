@@ -282,10 +282,10 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget>
           opacity: showContent ? 1 : 0,
           duration: Durations.medium2,
           child: widget.skipWidget ??
-              InkWell(
+              
                 onTap: skip,
-                child: IgnorePointer(
-                  child: widget.skipWidget ??
+                child: 
+                  widget.skipWidget ??
                       Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Text(
@@ -293,8 +293,8 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget>
                           style: widget.textStyleSkip,
                         ),
                       ),
-                ),
-              ),
+              
+             
         ),
       ),
     );
