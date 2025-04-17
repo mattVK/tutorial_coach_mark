@@ -429,6 +429,10 @@ class AnimatedPulseFocusLightState extends AnimatedFocusLightState {
                       left: left,
                       top: top,
                       child: InkWell(
+                        splashColor: !_targetFocus.enableTargetTab ? Colors.transparent : null,
+                        highlightColor: !_targetFocus.enableTargetTab ? Colors.transparent : null,
+                        hoverColor: !_targetFocus.enableTargetTab ? Colors.transparent : null,
+                        focusColor: !_targetFocus.enableTargetTab ? Colors.transparent : null,
                         borderRadius: _betBorderRadiusTarget(),
                         onTap: _onTargetTap,
                         onTapDown: _tapHandlerForPosition,
