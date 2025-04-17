@@ -32,6 +32,7 @@ class AnimatedFocusLight extends StatefulWidget {
     this.rootOverlay = false,
     this.initialFocus = 0,
     this.backgroundSemanticLabel,
+    this.removeDefaultGestures,
   })  : assert(targets.length > 0),
         super(key: key);
 
@@ -55,6 +56,7 @@ class AnimatedFocusLight extends StatefulWidget {
   final ImageFilter? imageFilter;
   final int initialFocus;
   final String? backgroundSemanticLabel;
+  final bool removeDefaultGestures;
 
   @override
   // ignore: no_logic_in_create_state
@@ -142,7 +144,7 @@ abstract class AnimatedFocusLightState extends State<AnimatedFocusLight>
     bool overlayTap = false,
   }) async {
     if (_isAnimating) return;
-    nextIndex++;
+    if (!removeDefaultGestures) nextIndex++;
     if (targetTap) {
       await widget.clickTarget?.call(_targetFocus);
     }
