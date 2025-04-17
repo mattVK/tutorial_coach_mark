@@ -329,7 +329,7 @@ class AnimatedStaticFocusLightState extends AnimatedFocusLightState {
                   left: left,
                   top: top,
                   child: InkWell(
-                    enableFeedback: !_targetFocus.enableTargetTab,
+                    enableFeedback: _targetFocus.enableTargetTab,
                     borderRadius: _betBorderRadiusTarget(),
                     onTapDown: _tapHandlerForPosition,
                     onTap: _onTargetTap,
@@ -430,7 +430,7 @@ class AnimatedPulseFocusLightState extends AnimatedFocusLightState {
                       left: left,
                       top: top,
                       child: InkWell(
-                        enableFeedback: !_targetFocus.enableTargetTab,
+                        enableFeedback: _targetFocus.enableTargetTab,
                         borderRadius: _betBorderRadiusTarget(),
                         onTap: _onTargetTap,
                         onTapDown: _tapHandlerForPosition,
