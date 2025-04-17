@@ -100,6 +100,7 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget>
             rootOverlay: widget.rootOverlay,
             imageFilter: widget.imageFilter,
             backgroundSemanticLabel: widget.backgroundSemanticLabel,
+            removeDefaultGestures: widget.removeDefaultGestures,
             clickTarget: (target) {
               return widget.clickTarget?.call(target);
             },
