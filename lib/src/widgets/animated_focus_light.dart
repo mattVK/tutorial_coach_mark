@@ -329,6 +329,7 @@ class AnimatedStaticFocusLightState extends AnimatedFocusLightState {
                   left: left,
                   top: top,
                   child: InkWell(
+                    enableFeedback: !_targetFocus.enableTargetTab,
                     borderRadius: _betBorderRadiusTarget(),
                     onTapDown: _tapHandlerForPosition,
                     onTap: _onTargetTap,
