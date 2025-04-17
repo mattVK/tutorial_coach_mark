@@ -32,7 +32,7 @@ class AnimatedFocusLight extends StatefulWidget {
     this.rootOverlay = false,
     this.initialFocus = 0,
     this.backgroundSemanticLabel,
-    this.removeDefaultGestures,
+    required this.removeDefaultGestures,
   })  : assert(targets.length > 0),
         super(key: key);
 
