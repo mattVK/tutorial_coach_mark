@@ -273,30 +273,20 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget>
       return const SizedBox.shrink();
     }
 
-    return Align(
+   return Align(
       alignment: currentTarget?.alignSkip ?? widget.alignSkip,
       child: SafeArea(
-        bottom: widget.useSafeArea ? true : false,
-        top: widget.useSafeArea ? true : false,
-        left: widget.useSafeArea ? true : false,
-        right: widget.useSafeArea ? true : false,
         child: AnimatedOpacity(
           opacity: showContent ? 1 : 0,
-          duration: Durations.medium2,
+          duration: const Duration(milliseconds: 300),
           child: widget.skipWidget ??
-              
-                onTap: skip,
-                child: 
-                  widget.skipWidget ??
-                      Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Text(
-                          widget.textSkip,
-                          style: widget.textStyleSkip,
-                        ),
-                      ),
-              
-             
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Text(
+                  widget.textSkip,
+                  style: widget.textStyleSkip,
+                ),
+              ),
         ),
       ),
     );
