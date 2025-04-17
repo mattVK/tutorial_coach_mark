@@ -334,6 +334,7 @@ class AnimatedStaticFocusLightState extends AnimatedFocusLightState {
   hoverColor: !_targetFocus.enableTargetTab ? Colors.transparent : null,
   focusColor: !_targetFocus.enableTargetTab ? Colors.transparent : null,
                     overlayColor: !_targetFocus.enableTargetTab ? MaterialStateProperty.all(Colors.transparent) : null,
+                    canRequestFocus: false
                     enableFeedback: _targetFocus.enableTargetTab,
                     borderRadius: _betBorderRadiusTarget(),
                     onTapDown: _tapHandlerForPosition,
@@ -441,6 +442,7 @@ class AnimatedPulseFocusLightState extends AnimatedFocusLightState {
   focusColor: !_targetFocus.enableTargetTab ? Colors.transparent : null,
                         overlayColor: !_targetFocus.enableTargetTab ? MaterialStateProperty.all(Colors.transparent) : null,
                         enableFeedback: _targetFocus.enableTargetTab,
+                        canRequestFocus: false
                         borderRadius: _betBorderRadiusTarget(),
                         onTap: _onTargetTap,
                         onTapDown: _tapHandlerForPosition,
