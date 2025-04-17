@@ -36,6 +36,7 @@ class TutorialCoachMarkWidget extends StatefulWidget {
     this.imageFilter,
     this.backgroundSemanticLabel,
     this.initialFocus = 0,
+    this.removeDefaultGestures = false,
   })  : assert(targets.length > 0),
         super(key: key);
 
@@ -65,6 +66,7 @@ class TutorialCoachMarkWidget extends StatefulWidget {
   final ImageFilter? imageFilter;
   final int initialFocus;
   final String? backgroundSemanticLabel;
+  final bool? removeDefaultGestures;
 
   @override
   TutorialCoachMarkWidgetState createState() => TutorialCoachMarkWidgetState();
