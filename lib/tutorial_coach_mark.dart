@@ -138,6 +138,7 @@ class TutorialCoachMark {
           imageFilter: imageFilter,
           initialFocus: initialFocus,
           backgroundSemanticLabel: backgroundSemanticLabel,
+          removeDefaultGestures: removeDefaultGestures
         );
       },
     );
