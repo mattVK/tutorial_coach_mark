@@ -83,7 +83,7 @@ abstract class AnimatedFocusLightState extends State<AnimatedFocusLight>
   bool _isAnimating = true;
 
   Future<void> _revertAnimation() async {
-    if (!removeDefaultGesterus) {
+    if (!widget.removeDefaultGestures) {
     _isAnimating = true;
     _controller.duration = unFocusDuration;
     }
@@ -146,7 +146,7 @@ abstract class AnimatedFocusLightState extends State<AnimatedFocusLight>
     bool overlayTap = false,
   }) async {
     if (_isAnimating) return;
-    if (!removeDefaultGestures) nextIndex++;
+    if (!widget.removeDefaultGestures) nextIndex++;
     if (targetTap) {
       await widget.clickTarget?.call(_targetFocus);
     }
