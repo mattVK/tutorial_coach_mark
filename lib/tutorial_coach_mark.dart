@@ -74,6 +74,7 @@ class TutorialCoachMark {
   final int initialFocus;
   final GlobalKey<TutorialCoachMarkWidgetState> _widgetKey = GlobalKey();
   final bool disableBackButton;
+  final bool removeDefaultGestures;
 
   OverlayEntry? _overlayEntry;
   ModalRoute?
@@ -105,6 +106,7 @@ class TutorialCoachMark {
     this.initialFocus = 0,
     this.backgroundSemanticLabel,
     this.disableBackButton = true,
+    this.removeDefaultGestures = false,
   }) : assert(opacityShadow >= 0 && opacityShadow <= 1);
 
   OverlayEntry _buildOverlay({bool rootOverlay = false}) {
