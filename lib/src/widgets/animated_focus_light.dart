@@ -83,8 +83,10 @@ abstract class AnimatedFocusLightState extends State<AnimatedFocusLight>
   bool _isAnimating = true;
 
   Future<void> _revertAnimation() async {
+    if (!removeDefaultGesterus) {
     _isAnimating = true;
     _controller.duration = unFocusDuration;
+    }
   }
 
   void _listener(AnimationStatus status);
