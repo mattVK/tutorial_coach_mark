@@ -207,7 +207,7 @@ class TutorialCoachMarkWidgetState extends State<TutorialCoachMarkWidget>
             width = ancestorBox.size.width;
             left = 0;
             top = null;
-            bottom = haloHeight + (ancestorBox.size.height - positioned.dy);
+            bottom = (ancestorBox.size.height - positioned.dy);
           }
           break;
         case ContentAlign.left:
